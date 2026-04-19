@@ -1,4 +1,11 @@
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_KEY = os.getenv("API_FOOTBALL_KEY")
+
 
 class FootballAPI:
     """
@@ -32,6 +39,6 @@ class FootballAPI:
         response = requests.get(url, headers=self.headers, params=params)
         return response.json()
 
-api = FootballAPI("ee7b766a90b97e3efa97394d20e78a52")
+api = FootballAPI(API_KEY)
 countries = api.get("countries")
 print(countries["response"])
