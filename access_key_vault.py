@@ -1,6 +1,5 @@
 from azure.identity import ClientSecretCredential
 from azure.keyvault.secrets import SecretClient
-from azure.core.exceptions import HttpResponseError
 
 from dotenv import load_dotenv
 import os
