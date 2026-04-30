@@ -1,6 +1,7 @@
 import requests
 import os
 from dotenv import load_dotenv
+#.\.venv\Scripts\Activate.ps1
 
 load_dotenv()
 
