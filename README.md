@@ -1,6 +1,6 @@
 # FOOTBALL-API
 
-Ce projet consiste à mettre en place un pipeline de données sur Microsoft Azure permettant de collecter, stocker et sécuriser des données issues d’une API externe.
+Ce projet consiste à mettre en place un pipeline de données sur Microsoft Azure permettant de collecter, stocker et sécuriser des données issues d’une API externe, https://www.api-football.com/
 
 Il s’appuie sur une architecture Data Engineering cloud avec Python et les services Azure.
 
