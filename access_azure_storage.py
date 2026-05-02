@@ -87,7 +87,7 @@ def upload_blob():
 
 # main
 if __name__ == "__main__":
-    get_blob_data()
+    #get_blob_data()
     #list_blob()
     #get_multi_blob_data()
-    #upload_blob()
+    upload_blob()

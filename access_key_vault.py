@@ -24,11 +24,7 @@ credentials = ClientSecretCredential(
 # create a secret client object
 secret_client = SecretClient(vault_url= vault_url, credential= credentials)
 
-
-print("Before get_secret")
-print("Trying token...")
-token = credentials.get_token("https://vault.azure.net/.default")
-print("Token OK")
-secret = secret_client.get_secret(secret_name)
-print(secret.value)
-print("After get_secret")
+def get_secret():
+    token = credentials.get_token("https://vault.azure.net/.default")
+    secret = secret_client.get_secret(secret_name)
+    return secret.value
