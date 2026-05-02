@@ -2,7 +2,7 @@ from azure.identity import ClientSecretCredential
 from azure.storage.blob import BlobServiceClient
 from dotenv import load_dotenv
 import os
-
+import json
 load_dotenv()
 
 client_id = os.environ['AZURE_CLIENT_ID']
@@ -85,7 +85,27 @@ def upload_blob():
             container_client.upload_blob(name= filename, data=data)
 
 
-# main
+
+def upload_blob_from_memory(account_url, credential, container_name, data, filename):
+
+    blob_service_client = BlobServiceClient(
+        account_url=account_url,
+        credential=credential
+    )
+
+    container_client = blob_service_client.get_container_client(container_name)
+
+    json_string = json.dumps(data, ensure_ascii=False)
+
+    container_client.upload_blob(
+        name=filename,
+        data=json_string,
+        overwrite=True
+    )
+
+    print(f"Uploaded: {filename}")
+
+
 if __name__ == "__main__":
     #get_blob_data()
     #list_blob()
