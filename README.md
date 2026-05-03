@@ -4,6 +4,16 @@ Ce projet consiste à mettre en place un pipeline de données sur Microsoft Azur
 
 Il s’appuie sur une architecture Data Engineering cloud avec Python et les services Azure.
 
+
+## Déploiement
+
+Le pipeline est conçu pour être déployé sur Azure avec :
+
+Azure Functions (exécution serverless)
+Azure Blob Storage (stockage des données)
+Azure Key Vault (gestion des secrets)
+
+
 ## Étapes principales
 
 Collecte de données via une API REST externe (Python)
@@ -17,7 +27,7 @@ Automatisation du pipeline via Azure Functions/ trigger_function
 ## Evolution
 Migration vers Managed Identity
 Ajout de monitoring et logging
-Amélioration de l’architecture data
+Amélioration de l’architecture data 
 
 
 ## Structure du projet
