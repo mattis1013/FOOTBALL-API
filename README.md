@@ -11,9 +11,21 @@ Stockage des données dans Azure Blob Storage
 Gestion sécurisée des secrets via Azure Key Vault
 Authentification via Azure Active Directory (Service Principal)
 Structuration des données au format JSON pour un usage type Data Lake
+Automatisation du pipeline via Azure Functions/ trigger_function
 
-## Évolutions prévues
-Automatisation du pipeline via Azure Functions
+
+## Evolution
 Migration vers Managed Identity
 Ajout de monitoring et logging
 Amélioration de l’architecture data
+
+
+## Structure du projet
+.
+├── function_app.py
+├── main.py
+├── access_key_vault.py
+├── access_azure_storage.py
+├── requirements.txt
+├── host.json
+└── .gitignore
