@@ -21,7 +21,7 @@ Stockage des données dans Azure Blob Storage
 Gestion sécurisée des secrets via Azure Key Vault
 Authentification via Azure Active Directory (Service Principal)
 Structuration des données au format JSON pour un usage type Data Lake
-Automatisation du pipeline via Azure Functions/ trigger_function sur la branche git azure-function
+Automatisation du pipeline via Azure Functions/ trigger_function sur la branche git deploiement-azure-function
 
 
 ## Evolution
