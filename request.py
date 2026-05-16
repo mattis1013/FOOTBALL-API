@@ -19,7 +19,7 @@ class FootballAPI:
         response = requests.get(url, headers=self.headers, params=params)
 
         if response.status_code != 200:
-            print(f"❌ Erreur {endpoint} :", response.text)
+            print(f"Erreur {endpoint} :", response.text)
             return None
 
         return response.json()
@@ -33,28 +33,28 @@ def save_to_file(data, filename):
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
-    print(f"✅ Sauvegardé : {filepath}")
+    print(f"Sauvegardé : {filepath}")
 
 
 def main():
     api = FootballAPI(API_KEY)
 
-    # 🔹 1. Countries
+    # 1. Countries
     countries = api.get("countries")
     if countries:
         save_to_file(countries, "countries.json")
 
-    # 🔹 2. Fixtures (ex: Premier League 2023)
+    # 2. Fixtures (ex: Premier League 2023)
     fixtures = api.get("fixtures", {"league": 39, "season": 2023})
     if fixtures:
         save_to_file(fixtures, "fixtures.json")
 
-    # 🔹 3. Standings
+    # 3. Standings
     standings = api.get("standings", {"league": 39, "season": 2023})
     if standings:
         save_to_file(standings, "standings.json")
 
-    # 🔹 4. Statistics (ex: match ID)
+    # 4. Statistics (ex: match ID)
     stats = api.get("fixtures/statistics", {"fixture": 1035037})
     if stats:
         save_to_file(stats, "statistics.json")
