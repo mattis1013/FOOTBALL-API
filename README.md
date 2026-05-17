@@ -60,7 +60,7 @@ Le pipeline est conçu pour être déployé sur Azure avec :
 - Migration vers Managed Identity (évolution future)
 - Ajout de monitoring et logging (via Azure services)
 - Optimisation de l’architecture data (modularisation et séparation des responsabilités)
-- Soon ! :D
+- Soon 
 
 ---
 
