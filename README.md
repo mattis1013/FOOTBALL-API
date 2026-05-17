@@ -53,12 +53,14 @@ Le pipeline est conçu pour être déployé sur Azure avec :
 ---
 
 ## Évolution du projet
-
-- Amélioration de la gestion des erreurs API
+- Amélioration de la gestion des erreurs API (retry, logging)
 - Migration vers Managed Identity
 - Ajout de monitoring et logging
 - Optimisation de l’architecture data
-
+- Amélioration de la gestion des erreurs API (retry, logging)
+- Meilleure robustesse des uploads vers Azure Blob Storage
+- Ajout de logs structurés pour le suivi du pipeline
+-Soon ! :D
 ---
 
 
