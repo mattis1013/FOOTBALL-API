@@ -1,41 +1,52 @@
 # FOOTBALL-API
 
-Ce projet consiste à mettre en place un pipeline de données sur Microsoft Azure permettant de collecter, stocker et sécuriser des données issues d’une API externe, https://www.api-football.com/
+Ce projet met en place un pipeline de données sur Microsoft Azure permettant de collecter, transformer et stocker des données issues d’une API externe (https://www.api-football.com/).
 
 Il s’appuie sur une architecture Data Engineering cloud avec Python et les services Azure.
 
+---
 
 ## Déploiement
 
 Le pipeline est conçu pour être déployé sur Azure avec :
 
-Azure Functions (exécution serverless)
-Azure Blob Storage (stockage des données)
-Azure Key Vault (gestion des secrets)
+- Azure Functions (exécution serverless)
+- Azure Blob Storage (stockage des données)
+- Azure Key Vault (gestion des secrets)
 
+---
 
 ## Étapes principales
 
-Collecte de données via une API REST externe (Python)
-Stockage des données dans Azure Blob Storage
-Gestion sécurisée des secrets via Azure Key Vault
-Authentification via Azure Active Directory (Service Principal)
-Structuration des données au format JSON pour un usage type Data Lake
-Automatisation du pipeline via Azure Functions/ trigger_function sur la branche git deploiement-azure-function
+- Collecte de données via une API REST externe (Python / requests)
+- Authentification sécurisée via Azure Active Directory (Service Principal)
+- Récupération sécurisée des secrets via Azure Key Vault
+- Stockage des données dans Azure Blob Storage au format JSON
+- Structuration des données pour un usage type Data Lake
+- Automatisation du pipeline via Azure Functions (timer trigger sur la branche deploiement-azure-function)
 
+---
 
-## Evolution
-Code python : gestion des erreurs/p
-Migration vers Managed Identity
-Ajout de monitoring et logging
-Amélioration de l’architecture data 
+## Évolution du projet
+
+- Amélioration de la gestion des erreurs API
+- Migration vers Managed Identity
+- Ajout de monitoring et logging
+- Optimisation de l’architecture data
+
+---
+
+## Structure du projet
 
 
 ## Structure du projet
-.
 ├── function_app.py
 ├── football_api.py
 ├── access_key_vault.py
 ├── access_azure_storage.py
 ├── requirements.txt
 └── .gitignore
+
+## Configuration
+
+Les variables sensibles et de configuration sont stockées dans un fichier `.env` (non versionné).
