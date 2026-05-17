@@ -3,6 +3,31 @@
 Ce projet met en place un pipeline de données sur Microsoft Azure permettant de collecter, transformer et stocker des données issues d’une API externe (https://www.api-football.com/).
 
 Il s’appuie sur une architecture Data Engineering cloud avec Python et les services Azure.
+---
+
+## Branches
+
+Ce projet est organisé en deux branches principales :
+
+### main
+
+Cette branche contient le code permettant d’exécuter le pipeline en local.  
+Les données sont récupérées depuis l’API et peuvent être stockées et testées manuellement.
+
+Utilisée pour le développement, les tests et l’exécution locale.
+
+---
+
+### deploiement-azure-function
+
+Cette branche contient la version automatisée du pipeline déployée sur Azure.
+
+- Exécution via Azure Functions (timer trigger)
+- Pipeline entièrement automatisé
+- Aucune exécution manuelle nécessaire
+
+Utilisée pour le déploiement cloud et la production.
+
 
 ---
 
@@ -35,8 +60,6 @@ Le pipeline est conçu pour être déployé sur Azure avec :
 - Optimisation de l’architecture data
 
 ---
-
-## Structure du projet
 
 
 ## Structure du projet
