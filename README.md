@@ -25,6 +25,7 @@ Automatisation du pipeline via Azure Functions/ trigger_function sur la branche 
 
 
 ## Evolution
+Code python : gestion des erreurs/p
 Migration vers Managed Identity
 Ajout de monitoring et logging
 Amélioration de l’architecture data 
@@ -33,9 +34,8 @@ Amélioration de l’architecture data
 ## Structure du projet
 .
 ├── function_app.py
-├── main.py
+├── football_api.py
 ├── access_key_vault.py
 ├── access_azure_storage.py
 ├── requirements.txt
-├── host.json
 └── .gitignore
