@@ -53,16 +53,16 @@ Le pipeline est conçu pour être déployé sur Azure avec :
 ---
 
 ## Évolution du projet
-- Amélioration de la gestion des erreurs API (retry, logging)
-- Migration vers Managed Identity
-- Ajout de monitoring et logging
-- Optimisation de l’architecture data
-- Amélioration de la gestion des erreurs API (retry, logging)
-- Meilleure robustesse des uploads vers Azure Blob Storage
-- Ajout de logs structurés pour le suivi du pipeline
--Soon ! :D
----
 
+- Amélioration de la gestion des erreurs API (retry, logging)
+- Amélioration de la robustesse des uploads vers Azure Blob Storage
+- Ajout de logs pour le suivi du pipeline et le debugging
+- Migration vers Managed Identity (évolution future)
+- Ajout de monitoring et logging (via Azure services)
+- Optimisation de l’architecture data (modularisation et séparation des responsabilités)
+-Soon ! :D
+
+---
 
 ## Structure du projet
 ├── function_app.py
