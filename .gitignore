@@ -3,3 +3,18 @@ __pycache__/
 .env
 .idea/
 input/
+local.settings.json
+
+# Azure Functions runtime state
+__blobstorage__/
+__queuestorage__/
+
+# Azurite (local emulator)
+AzuriteConfig
+__azurite_db_blob__.json
+__azurite_db_blob_extent__.json
+__azurite_db_queue__.json
+__azurite_db_queue_extent__.json
+__azurite_db_table__.json
+
+.vscode/
